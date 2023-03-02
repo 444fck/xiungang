@@ -1,0 +1,17 @@
+{% extends 'Function/base.html' %}
+
+{% block content %}
+    {% if result %}
+        {% for row in result %}
+            <tr>
+                <td>
+                    <h1> {{ row }}</h1>
+                </td>
+            </tr>
+        {% endfor %}
+    {% endif %}
+
+    <a href="{% url 'home' %}">
+        <button>Go to Dashboard</button>
+    </a>
+{% endblock content %}
